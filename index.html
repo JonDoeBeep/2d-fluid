@@ -64,6 +64,8 @@ body {setup
     <span style = "margin: 0px 0px 0px 20px;">Visconsity</span> <td><input type = "range" min = "0" max = "10" value = "0" id = "viscositySlider" class = "slider"></td>
     <span style = "margin: 0px 0px 0px 20px;">Gravity</span> <td><input type = "range" min = "-10" max = "10" value = "-10" id = "gravSlide" class = "slider"></td>
     <span style = "margin: 0px 0px 0px 20px;">Particle Radius</span> <td><input type = "range" min = "0.01" max = "1" value = "0.01" id = "partRadSlide" class = "slider"></td>
+    <span style = "margin: 0px 0px 0px 20px;">Custom X</span> <td><input type = "range" min = "0" max = "200" value = "10" id = "cusX" class = "slider"></td>
+    <span style = "margin: 0px 0px 0px 20px;">Custom Y</span> <td><input type = "range" min = "0" max = "200" value = "10" id = "cusY" class = "slider"></td>
 
 	<br><br>
 
@@ -564,12 +566,20 @@ Your browser does not support the HTML5 canvas tag.</canvas>
 //		document.getElementById("viscosity").innerHTML = viscosity.toString();
 	}
 			document.getElementById("gravSlide").oninput = function() {
-		viscosity = this.value / 15;	
-//		document.getElementById("gravity").innerHTML = viscosity.toString();
+		gravity = this.value / 15;	
+//		document.getElementById("gravity").innerHTML = gravity.toString();
 	}
 			document.getElementById("partRadSlide").oninput = function() {
-		viscosity = this.value / 15;	
-//		document.getElementById("particleRadius").innerHTML = viscosity.toString();
+		particleRadius = this.value / 15;	
+//		document.getElementById("particleRadius").innerHTML = particleRadius.toString();
+	}			
+	document.getElementById("cusX").oninput = function() {
+		numX = this.value / 15;	
+//		document.getElementById("numX").innerHTML = numX.toString();
+	}
+			document.getElementById("cusY").oninput = function() {
+		numY = this.value / 15;	
+//		document.getElementById("numY").innerHTML = numY.toString();
 	}
 
 	// main
